@@ -1,0 +1,227 @@
+/* variables declared here - these are the colors for our pages, as well as the font stacks and sizes. */
+:root {
+  --nav-font-size-left: 1.2rem;
+  --nav-font-size-right: 1rem;
+  --font-size: 1.5rem;
+  --font-1: "Century Gothic";
+  --font-2: "Red Hat Display", sans-serif;
+}
+
+/* Animated gradient */
+body, .blackbox {
+  background: linear-gradient(-45deg, #7934b9, #a55a9f, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  background-attachment: fixed;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+/* End of animated gradient */
+
+/* gap above navbar */
+.gap{
+  margin: 15px;
+}
+
+/* navbar */
+nav {
+  font-family: var(--font-1);
+  font-size: 80%; /* its 80% of the h1 size */
+  padding: 1rem;  
+}
+nav ul {
+  list-style-type: none;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 2rem;
+  font-size: var(--nav-font-size-right);
+}
+nav ul:first-child{
+  display: flex;
+  justify-content: flex-start;
+}
+nav h1 {
+  font-family: var(--font-2);
+  font-size: var(--nav-font-size-left);
+}
+/* for the icons */
+nav [class*="fa-"] {
+  font-size: 150%;
+}
+/* overides the size above for the icon on the left of the name */
+nav h1 [class*="fa-"] {
+  font-size: 100%;
+  color: #741123;
+}
+nav a {
+  color: #314e52;
+  text-decoration: none;
+  display: block;
+  transition: all 0.2s ease-in-out;
+}
+nav a:hover {
+  color: #833b99;
+  font-size: 110%;
+}
+
+.button {
+  background-color: #314e52;
+  padding: 0.5rem;
+  border-radius: 5px;
+  color: #d6dce1;
+  font-family: var(--font-1);
+  text-decoration: none;
+}
+.button:hover {
+  background-color: #833b99;
+  color: #d6dce1;
+}
+/* end of navbar */
+
+body {
+  font-family: var(--font-2);
+  color: whitesmoke
+  font-size: var(--font-size);
+}
+
+a {
+  color: #a81414;
+}
+a:hover {
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+/* Backgrounds */
+.project-backgrd, nav {
+  background-color: #d6dce1;
+  border-radius: 20px;
+}
+
+/* intro styles */
+#intro {
+  padding: 6rem 1rem 10rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+
+}
+
+#intro p {
+  font-size: 1.5rem;
+  line-height: 1.5; /*no units means its a proportion*/
+}
+#intro .greet {
+  font-family: var(--font-1);
+}
+
+.myname {
+  font-family: var(--font-2);
+  font-size: 4rem;
+  color: #d6dce1;
+  display: block;
+}
+#intro h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+#intro p a {
+  text-decoration: none;
+}
+
+/* Projects */
+#projects {
+  padding: 4rem 1rem;
+}
+#projects h2 {
+  font-size: 2.5rem;
+  margin-bottom: 3.75rem;
+  text-align: center;
+}
+#projects h3 {
+  color: #5a6442;
+}
+#projects h4 {
+  font-size: 1rem;
+  font-family: var(--font-1);
+}
+.blackbox {
+  padding: 1rem;
+  border-radius: 10px;
+  color: var(--white);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+#projects ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  gap: 1rem;
+  font-size: 1rem;
+}
+#projects img {
+  margin: 2rem 0 4rem 0;
+  border-left: 1px solid;
+  border-top: 1px solid;
+  border-radius: 25px;
+  padding: 1rem;
+}
+
+/* contact section */
+#contact {
+  width: 400px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 3rem 0;
+  color: #d6dce1;
+  font-size: x-large;
+}
+
+#contact p {
+  margin-top: 3rem;
+}
+
+/* footer */
+footer {
+  text-align: center;
+  padding: 4rem 0;
+}
+
+footer ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 2rem 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  font-size: 3rem;
+}
+footer ul a {
+  color: #314e52;
+  text-decoration: none;
+}
+footer ul a:hover {
+  color: #833b99;
+}
+
