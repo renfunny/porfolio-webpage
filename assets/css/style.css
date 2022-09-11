@@ -8,7 +8,8 @@
 }
 
 /* Animated gradient */
-body {
+body,
+.blackbox {
   background: linear-gradient(-45deg, #7934b9, #a55a9f, #23a6d5, #23d5ab);
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
@@ -46,9 +47,9 @@ nav ul {
   list-style-type: none;
   display: flex;
   flex-flow: row wrap;
-  justify-content: flex-end;
+  justify-content: space-around;
   align-items: center;
-  gap: 2rem;
+  gap: 1rem;
   font-size: var(--nav-font-size-right);
 }
 
@@ -90,6 +91,10 @@ nav a:hover {
   color: #d6dce1;
 }
 /* end of navbar */
+
+.avatar {
+  border-radius: 100%;
+}
 
 body {
   font-family: var(--font-2);
@@ -158,7 +163,6 @@ nav {
 .small-project {
   text-align: center;
   display: grid;
-  gap: 1rem;
   margin-bottom: 2rem;
 }
 .first-project {
@@ -175,7 +179,7 @@ nav {
   transition: all 0.2s ease-in-out;
   border: 2px solid #314e52;
 }
-#projects a:hover {
+#projects :hover {
   opacity: 100%;
 }
 .first-text,
@@ -193,34 +197,14 @@ nav {
   z-index: 10;
 }
 .blackbox {
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-  grid-row: 9/10;
-  grid-column: 1/5;
-  z-index: 10;
+  border-radius: 20px;
   background-color: #314e52;
   color: whitesmoke;
   font-weight: lighter;
   padding: 0.5rem;
   font-size: 1.5rem;
 }
-/* if the screen is bigger that 768px (desktop) it will add grid to the projects layout */
-@media screen and (min-width: 768px) {
-  .other-projects {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  .small-project {
-    width: 45%;
-    height: 20rem;
-  }
-  #projects .other-projects img {
-    height: 20rem;
-    object-fit: cover;
-  }
-}
+
 /* contact section */
 #contact {
   width: 400px;
@@ -243,7 +227,6 @@ footer {
 
 footer ul {
   list-style-type: none;
-  padding: 0;
   margin: 2rem 0;
   display: flex;
   flex-flow: row wrap;
@@ -258,4 +241,40 @@ footer ul a {
 }
 footer ul a:hover {
   color: #833b99;
+}
+
+/* if the screen is bigger that 768px (desktop) it will add grid to the projects layout */
+@media screen and (min-width: 768px) {
+  .other-projects {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .small-project {
+    width: 48%;
+    height: 20rem;
+    margin-bottom: 3.5rem;
+  }
+  #projects .other-projects img {
+    height: 20rem;
+    object-fit: cover;
+  }
+  nav ul {
+    gap: 2rem;
+  }
+  .aboutme {
+    display: grid;
+  }
+  .avatar {
+    width: 25%;
+    border-radius: 100%;
+    grid-row: 1/5;
+    grid-column: 1/2;
+    z-index: 10;
+  }
+  .abtme-box {
+    grid-row: 2/5;
+    grid-column: 1/2;
+  }
 }
