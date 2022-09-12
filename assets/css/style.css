@@ -193,6 +193,9 @@ nav {
   transition: all 0.2s ease-in-out;
   border: 2px solid #314e52;
 }
+.project {
+  border-radius: 20px;
+}
 #projects :hover {
   opacity: 100%;
 }
