@@ -104,6 +104,7 @@ nav a:hover {
 .avatar-box {
   margin-bottom: 0.5rem;
 }
+
 .abtme-title {
   font-size: 2.5rem;
   text-align: center;
@@ -183,20 +184,22 @@ nav {
   width: 100%;
 }
 
+.project {
+  opacity: 25%;
+  transition: all 0.2s ease-in-out;
+}
 #projects a {
   grid-row: 1/10;
   grid-column: 1/5;
   border-radius: 25px;
   padding: 0.5rem;
   width: 100%;
-  opacity: 25%;
-  transition: all 0.2s ease-in-out;
   border: 2px solid #314e52;
 }
 .project {
   border-radius: 20px;
 }
-#projects :hover {
+.project:hover {
   opacity: 100%;
 }
 .first-text,
@@ -288,6 +291,7 @@ footer ul a:hover {
     grid-column: 1/2;
     margin-bottom: 0;
   }
+
   div .abtme-box {
     grid-row: 2/5;
     grid-column: 2/10;
